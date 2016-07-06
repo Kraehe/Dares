@@ -4,7 +4,7 @@ class DaresController < ApplicationController
   # GET /dares
   # GET /dares.json
   def index
-    @dares = Dare.all
+    @dares = current_user.dares.all
   end
 
   # GET /dares/1
@@ -14,7 +14,7 @@ class DaresController < ApplicationController
 
   # GET /dares/new
   def new
-    @dare = Dare.new
+    @dare = current_user.dares.new
   end
 
   # GET /dares/1/edit
@@ -24,7 +24,7 @@ class DaresController < ApplicationController
   # POST /dares
   # POST /dares.json
   def create
-    @dare = Dare.new(dare_params)
+    @dare = current_user.dares.new(dare_params)
 
     respond_to do |format|
       if @dare.save
@@ -64,7 +64,7 @@ class DaresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_dare
-      @dare = Dare.find(params[:id])
+      @dare = current_user.dares.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

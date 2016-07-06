@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 # https://github.com/plataformatec/devise
 gem 'devise'
+# https://github.com/Ink/filepicker-rails
+gem 'filepicker-rails'
 
 
 # Use Capistrano for deployment
