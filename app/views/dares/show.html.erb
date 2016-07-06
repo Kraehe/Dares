@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dare.name %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @dare.completed %>
+</p>
+
+<%= link_to 'Edit', edit_dare_path(@dare) %> |
+<%= link_to 'Back', dares_path %>
